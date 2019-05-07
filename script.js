@@ -5,7 +5,7 @@ var fear=["https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ
 
 $('button').click(function(){
     var input = $('input').val();
-    $(".images").html("");
+        $(".images").html("");
     if(input === "happy"){
         happyMood();
     } else if(input==="sad"){
@@ -21,24 +21,40 @@ $('button').click(function(){
 
 function happyMood(){
     displayImage(happy);
+    changeTextColor("green");
+    changeBackground("https://previews.123rf.com/images/mirage3/mirage31203/mirage3120300070/12947705-fun-young-and-happy-background-with-overlayed-bubbles-of-varying-colors-and-opacity-mainly-in-shades.jpg");
 }
 
 function sadMood(){
     displayImage(sad);
+    changeTextColor("grey");
+    changeBackground("https://i.ytimg.com/vi/xDXbPiOvClw/maxresdefault.jpg");
+
 }
 
 function annoyedMood(){
     displayImage(annoyed);
+    changeTextColor("red");
+    changeBackground();
 }
 
 function fearfulMood(){
     displayImage(fear);
+    changeTextColor("yellow");
+    changeBackground("");
 }
-function displayImage(image){
-    happy.forEach(function(element){
-    $(".images").append("<img src ="+ image + ">");    
+function displayImage(images){
+    images.forEach(function(element){
+    $(".images").append("<img src ="+ element + ">");    
     });
 }
 
+function changeTextColor(color){
+    $('body').css('color', color);
+}
 
+function changeBackground(backgroundImage){
+    $('body').css('background-image', "url("+backgroundImage+")");
+}
 
+ 
