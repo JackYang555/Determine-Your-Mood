@@ -1,6 +1,10 @@
 body{
     text-align: center;
+    background-image:url("https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiZ_tnnpIriAhVQJt8KHXjcA6UQjRx6BAgBEAU&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fbackground%2F&psig=AOvVaw0WndO__3cthTLmri43_0-R&ust=1557348339378425") ;
 }
 
-.images{
+.images img{
+    height:200px;
+    width: 200px;
+    
 }
